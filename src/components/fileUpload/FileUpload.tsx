@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { BsCardImage } from "react-icons/bs";
+import { usePalette } from "react-palette";
 
 const FileUpload = () => {
   const [image, setImage] = useState<any>(null);
@@ -15,6 +16,9 @@ const FileUpload = () => {
     const { files } = e.target;
     if (files) setImage(files[0]);
   };
+
+  const { data } = usePalette(imageURL);
+  console.log(data);
 
   const processImageHandler = () => {
     console.log("Processing colors...");
