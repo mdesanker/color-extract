@@ -1,25 +1,19 @@
 import React, { useEffect, useState } from "react";
 
 const FileUpload = () => {
-  const [images, setImages] = useState<FileList | null>();
-  const [imageURLs, setImageURLs] = useState<string[]>([]);
+  const [image, setImage] = useState<any>();
+  const [imageURL, setImageURL] = useState("");
 
   useEffect(() => {
-    if (images) {
-      if (images.length === 0) return;
-      const newImageUrls = [];
-      for (let i = 0; i < images.length; i++) {
-        newImageUrls.push(URL.createObjectURL(images[i]));
-      }
-      setImageURLs(newImageUrls);
+    if (image) {
+      setImageURL(URL.createObjectURL(image));
     }
-  }, [images]);
+  }, [image]);
 
   const fileUploadHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setImages(e.target.files);
+    const { files } = e.target;
+    if (files) setImage(files[0]);
   };
-
-  console.log(imageURLs);
 
   return (
     <div className="bg-white rounded-lg shadow-lg p-6">
@@ -29,10 +23,7 @@ const FileUpload = () => {
         accept="image/*"
         onChange={fileUploadHandler}
       />
-      {images &&
-        imageURLs.map((imageSrc, i) => (
-          <img src={imageSrc} key="1" alt={images[i].name} />
-        ))}
+      {image && <img src={imageURL} alt={image.name} />}
     </div>
   );
 };
