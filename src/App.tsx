@@ -4,10 +4,10 @@ import FileUpload from "./components/fileUpload/FileUpload";
 
 const App = () => {
   return (
-    <div>
+    <>
       <h1>Hello, world!</h1>
       <FileUpload />
-    </div>
+    </>
   );
 };
 
