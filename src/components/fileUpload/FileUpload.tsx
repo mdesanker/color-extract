@@ -10,7 +10,6 @@ const FileUpload = () => {
       const newImageUrls = [];
       for (let i = 0; i < images.length; i++) {
         newImageUrls.push(URL.createObjectURL(images[i]));
-        console.log(URL.createObjectURL(images[i]));
       }
       setImageURLs(newImageUrls);
     }
@@ -20,12 +19,20 @@ const FileUpload = () => {
     setImages(e.target.files);
   };
 
+  console.log(imageURLs);
+
   return (
     <div className="bg-white rounded-lg shadow-lg p-6">
-      <input type="file" accept="image/*" onChange={fileUploadHandler} />
-      {imageURLs.map((imageSrc) => (
-        <img src={imageSrc} key="1" alt="blah" />
-      ))}
+      <input
+        type="file"
+        id="select-image"
+        accept="image/*"
+        onChange={fileUploadHandler}
+      />
+      {images &&
+        imageURLs.map((imageSrc, i) => (
+          <img src={imageSrc} key="1" alt={images[i].name} />
+        ))}
     </div>
   );
 };
