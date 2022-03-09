@@ -22,12 +22,10 @@ const FileUpload = () => {
 
   return (
     <div className="bg-white rounded-lg shadow-lg p-6">
-      <input
-        type="file"
-        // multiple
-        accept="image/*"
-        onChange={fileUploadHandler}
-      />
+      <input type="file" accept="image/*" onChange={fileUploadHandler} />
+      {imageURLs.map((imageSrc) => (
+        <img src={imageSrc} key="1" alt="blah" />
+      ))}
     </div>
   );
 };
