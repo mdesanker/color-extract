@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { usePalette } from "react-palette";
 import "./App.css";
 import FileUpload from "./components/fileUpload/FileUpload";
+import Header from "./components/header/Header";
 import ColorPanel from "./components/palette/ColorPanel";
 
 const App = () => {
@@ -36,6 +37,7 @@ const App = () => {
 
   return (
     <>
+      <Header />
       <FileUpload
         fileUpload={fileUploadHandler}
         clearImage={clearImageHandler}
