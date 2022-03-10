@@ -17,12 +17,12 @@ export const loadImage = createAsyncThunk<any, File>(
 );
 
 export interface ImageState {
-  image: string | null;
+  image: string | undefined;
   imageURL: string;
 }
 
 const initialState: ImageState = {
-  image: null,
+  image: undefined,
   imageURL: "",
 };
 
@@ -37,7 +37,7 @@ const imageSlice = createSlice({
       state.imageURL = payload;
     },
     clearImage: (state) => {
-      state.image = null;
+      state.image = undefined;
       state.imageURL = "";
     },
   },

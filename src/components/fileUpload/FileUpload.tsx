@@ -2,6 +2,7 @@ import React from "react";
 import { BsCardImage } from "react-icons/bs";
 import { useAppDispatch } from "../../store/hooks";
 import { loadImage, setImage } from "../../store/slices/imageSlice";
+import Preview from "./Preview";
 
 const FileUpload = ({ fileUpload, clearImage, image, imageURL }: any) => {
   const dispatch = useAppDispatch();
@@ -34,13 +35,7 @@ const FileUpload = ({ fileUpload, clearImage, image, imageURL }: any) => {
             onChange={fileUploadHandler}
           />
         </label>
-        {image && (
-          <img
-            src={imageURL}
-            alt={image.name}
-            className="h-full w-full object-contain bg-gray-50 border-dashed border-2 border-gray-300 rounded-lg"
-          />
-        )}
+        <Preview />
       </div>
       <div className="flex flex-col items-center pt-2">
         <button
