@@ -1,9 +1,11 @@
 import { configureStore, ThunkAction, Action } from "@reduxjs/toolkit";
 import imageReducer from "./slices/imageSlice";
+import alertReducer from "./slices/alertSlice";
 
 export const store = configureStore({
   reducer: {
     image: imageReducer,
+    alert: alertReducer,
   },
 });
 
