@@ -1,7 +1,18 @@
 import React from "react";
 import { BsCardImage } from "react-icons/bs";
+import { useAppDispatch } from "../../store/hooks";
+import { setImage } from "../../store/slices/imageSlice";
 
 const FileUpload = ({ fileUpload, clearImage, image, imageURL }: any) => {
+  const dispatch = useAppDispatch();
+
+  const fileUploadHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { files } = e.target;
+    if (files) {
+      dispatch(setImage(files[0]));
+    }
+  };
+
   return (
     <>
       <div className="w-9/10 max-w-[500px] h-[300px] flex flex-col justify-center items-center">
@@ -20,7 +31,7 @@ const FileUpload = ({ fileUpload, clearImage, image, imageURL }: any) => {
             id="select-image"
             accept="image/*"
             className="hidden"
-            onChange={fileUpload}
+            onChange={fileUploadHandler}
           />
         </label>
         {image && (

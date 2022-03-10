@@ -13,9 +13,20 @@ const initialState: ImageState = {
 const imageSlice = createSlice({
   name: "image",
   initialState,
-  reducers: {},
+  reducers: {
+    setImage: (state, { payload }) => {
+      state.image = payload;
+    },
+    setImageURL: (state, { payload }) => {
+      state.imageURL = payload;
+    },
+    clearImage: (state) => {
+      state.image = null;
+      state.imageURL = "";
+    },
+  },
 });
 
-// export const {} = imageSlice.actions;
+export const { setImage, setImageURL, clearImage } = imageSlice.actions;
 
 export default imageSlice.reducer;
