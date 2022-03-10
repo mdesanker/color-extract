@@ -1,4 +1,18 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import { v4 as uuidv4 } from "uuid";
+
+export const timedAlert = createAsyncThunk<void, string>(
+  "alert/timed",
+  async (msg, { dispatch }) => {
+    const id = uuidv4();
+
+    dispatch(setAlert({ msg, id }));
+
+    setTimeout(() => {
+      dispatch(removeAlert(id));
+    }, 3000);
+  }
+);
 
 export interface Alert {
   id: string;
