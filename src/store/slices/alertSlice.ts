@@ -10,7 +10,7 @@ export const timedAlert = createAsyncThunk<void, string>(
 
     setTimeout(() => {
       dispatch(removeAlert(id));
-    }, 3000);
+    }, 2000);
   }
 );
 
@@ -26,10 +26,10 @@ const alertSlice = createSlice({
   initialState,
   reducers: {
     setAlert: (state, { payload }) => {
-      state = payload;
+      state.push(payload);
     },
     removeAlert: (state, { payload }) => {
-      state = state.filter((alert) => alert.id !== payload);
+      return state.filter((alert) => alert.id !== payload);
     },
   },
 });

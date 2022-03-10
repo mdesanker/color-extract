@@ -1,3 +1,5 @@
+import { useAppDispatch } from "../../store/hooks";
+import { timedAlert } from "../../store/slices/alertSlice";
 import { brightness } from "../../utils/Utils";
 
 interface Props {
@@ -5,10 +7,13 @@ interface Props {
 }
 
 const ColorSwatch = ({ color }: Props) => {
+  const dispatch = useAppDispatch();
+
   const hexCode = color.slice(1);
 
   const clickHandler = () => {
     navigator.clipboard.writeText(hexCode);
+    dispatch(timedAlert("Color copied to clipboard!"));
   };
 
   return (

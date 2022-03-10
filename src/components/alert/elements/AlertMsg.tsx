@@ -6,7 +6,7 @@ interface Props {
 
 const AlertMsg = ({ msg }: Props) => {
   return (
-    <div className="flex items-center justify-center gap-4 border px-6 py-3 rounded-full bg-cyan-900 shadow-md mb-2 text-sm sm:text-lg">
+    <div className="flex items-center justify-center gap-4 px-6 py-3 rounded-full bg-cyan-900 shadow-md mb-2 text-sm">
       <div className="rounded-full p-1 bg-white">
         <FaCheck className="text-cyan-900" />
       </div>
