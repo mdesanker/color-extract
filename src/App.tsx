@@ -36,7 +36,6 @@ const App = () => {
 
   return (
     <>
-      <h1>Hello, world!</h1>
       <FileUpload
         fileUpload={fileUploadHandler}
         clearImage={clearImageHandler}
