@@ -4,7 +4,7 @@ import { BsCardImage } from "react-icons/bs";
 const FileUpload = ({ fileUpload, clearImage, image, imageURL }: any) => {
   return (
     <>
-      <div className="w-9/10 max-w-[500px] h-[300px] w-full flex flex-col justify-center items-center">
+      <div className="w-9/10 max-w-[500px] h-[300px] flex flex-col justify-center items-center">
         <label
           htmlFor="select-image"
           className={`w-full h-[300px] rounded-lg bg-gray-100 p-6 border-dashed border-2 border-gray-300 flex flex-col justify-center items-center cursor-pointer ${
