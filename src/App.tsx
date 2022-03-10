@@ -15,22 +15,7 @@ const App = () => {
     }
   }, [image]);
 
-  const fileUploadHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { files } = e.target;
-
-    if (files) {
-      console.log(files[0]);
-      setImage(files[0]);
-    }
-  };
-
   const { data } = usePalette(imageURL);
-  // console.log(data);
-
-  const clearImageHandler = () => {
-    setImage(null);
-    setImageURL("");
-  };
 
   const colorArray = [];
   for (let key of Object.keys(data)) {
@@ -42,13 +27,8 @@ const App = () => {
   return (
     <>
       <Header />
-      <FileContainer
-        fileUpload={fileUploadHandler}
-        clearImage={clearImageHandler}
-        image={image}
-        imageURL={imageURL}
-      />
-      <ColorPanel colors={colorArray} />
+      <FileContainer />
+      {/* <ColorPanel colors={colorArray} /> */}
     </>
   );
 };

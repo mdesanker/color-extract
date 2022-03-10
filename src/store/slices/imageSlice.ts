@@ -33,9 +33,6 @@ const imageSlice = createSlice({
     setImage: (state, { payload }) => {
       state.image = payload;
     },
-    setImageURL: (state, { payload }) => {
-      state.imageURL = payload;
-    },
     clearImage: (state) => {
       state.image = undefined;
       state.imageURL = "";
@@ -48,6 +45,6 @@ const imageSlice = createSlice({
   },
 });
 
-export const { setImage, setImageURL, clearImage } = imageSlice.actions;
+export const { setImage, clearImage } = imageSlice.actions;
 
 export default imageSlice.reducer;
