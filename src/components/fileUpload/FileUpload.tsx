@@ -1,7 +1,7 @@
 import React from "react";
 import { BsCardImage } from "react-icons/bs";
 import { useAppDispatch } from "../../store/hooks";
-import { setImage } from "../../store/slices/imageSlice";
+import { loadImage, setImage } from "../../store/slices/imageSlice";
 
 const FileUpload = ({ fileUpload, clearImage, image, imageURL }: any) => {
   const dispatch = useAppDispatch();
@@ -9,7 +9,7 @@ const FileUpload = ({ fileUpload, clearImage, image, imageURL }: any) => {
   const fileUploadHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { files } = e.target;
     if (files) {
-      dispatch(setImage(files[0]));
+      dispatch(loadImage(files[0]));
     }
   };
 

@@ -17,11 +17,15 @@ const App = () => {
 
   const fileUploadHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { files } = e.target;
-    if (files) setImage(files[0]);
+
+    if (files) {
+      console.log(files[0]);
+      setImage(files[0]);
+    }
   };
 
   const { data } = usePalette(imageURL);
-  console.log(data);
+  // console.log(data);
 
   const clearImageHandler = () => {
     setImage(null);

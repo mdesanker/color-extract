@@ -1,7 +1,23 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+
+export const loadImage = createAsyncThunk<any, File>(
+  "image/load",
+  async (file, { dispatch, rejectWithValue }) => {
+    try {
+      dispatch(setImage(file.name));
+
+      const url = URL.createObjectURL(file);
+      console.log(url);
+
+      return url;
+    } catch (err: any) {
+      return rejectWithValue(err);
+    }
+  }
+);
 
 export interface ImageState {
-  image: any;
+  image: string | null;
   imageURL: string;
 }
 
@@ -24,6 +40,11 @@ const imageSlice = createSlice({
       state.image = null;
       state.imageURL = "";
     },
+  },
+  extraReducers: (builder) => {
+    builder.addCase(loadImage.fulfilled, (state, { payload }) => {
+      state.imageURL = payload;
+    });
   },
 });
 
