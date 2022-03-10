@@ -1,10 +1,8 @@
-import { useAppSelector } from "../../store/hooks";
-import { RootState } from "../../store/store";
+import { useAppSelector } from "../../../store/hooks";
+import { RootState } from "../../../store/store";
 
-const Preview = () => {
+const FilePreview = () => {
   const { image, imageURL } = useAppSelector((state: RootState) => state.image);
-
-  console.log(image);
 
   return (
     <>
@@ -19,4 +17,4 @@ const Preview = () => {
   );
 };
 
-export default Preview;
+export default FilePreview;

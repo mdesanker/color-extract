@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { usePalette } from "react-palette";
 import "./App.css";
-import FileUpload from "./components/fileUpload/FileUpload";
+import FileContainer from "./components/fileContainer/FileContainer";
 import Header from "./components/header/Header";
 import ColorPanel from "./components/palette/ColorPanel";
 
@@ -42,7 +42,7 @@ const App = () => {
   return (
     <>
       <Header />
-      <FileUpload
+      <FileContainer
         fileUpload={fileUploadHandler}
         clearImage={clearImageHandler}
         image={image}
