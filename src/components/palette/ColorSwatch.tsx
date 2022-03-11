@@ -18,7 +18,7 @@ const ColorSwatch = ({ color }: Props) => {
   const clickHandler = () => {
     navigator.clipboard.writeText(hexCode);
     setCheckVisible(true);
-    // dispatch(timedAlert("Color copied to clipboard!"));
+    dispatch(timedAlert("Color copied to clipboard!"));
   };
 
   const mouseLeaveHandler = () => {
@@ -28,7 +28,7 @@ const ColorSwatch = ({ color }: Props) => {
   return (
     <>
       <div
-        className="h-full grow cursor-pointer group  sm:hover:w-1/4"
+        className="h-full grow cursor-pointer group  sm:hover:w-1/3"
         style={{ backgroundColor: color }}
         onClick={clickHandler}
         onMouseLeave={mouseLeaveHandler}
@@ -39,7 +39,7 @@ const ColorSwatch = ({ color }: Props) => {
           }`}
         >
           {checkVisible ? (
-            <FaCheck className="text-2xl mx-2" />
+            <FaCheck className="text-2xl mx-5" />
           ) : (
             <p className="hidden sm:block font-medium uppercase text-center">
               {hexCode}
