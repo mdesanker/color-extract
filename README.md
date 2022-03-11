@@ -4,6 +4,10 @@ An app for extracting colors from images.
 
 The [Color Extractor](https://mdesanker.github.io/color-extract) App
 
+### Demo
+
+<img src="./demo/color-extract-demo.gif" alt="demo video" width="auto" height="300px" />
+
 ## Table of Contents
 
 - [Description](#Description)
