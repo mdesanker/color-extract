@@ -19,7 +19,7 @@ const ColorPanel = () => {
   return (
     <>
       {imageURL && (
-        <div className="w-9/10 max-w-[500px] h-28 rounded-3xl flex overflow-hidden mt-4">
+        <div className="w-9/10 max-w-[500px] h-28 rounded-xl flex overflow-hidden mt-4">
           {colors &&
             colors.map((color: any) => {
               return <ColorSwatch key={uuidv4()} color={color.color} />;
