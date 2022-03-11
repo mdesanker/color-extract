@@ -5,7 +5,7 @@ const FilePreview = () => {
   const { image, imageURL } = useAppSelector((state: RootState) => state.image);
 
   return (
-    <img src={imageURL} alt={image} className="h-full w-full object-contain " />
+    <img src={imageURL} alt={image} className="h-full w-full object-contain" />
   );
 };
 
