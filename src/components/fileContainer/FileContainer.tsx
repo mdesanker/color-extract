@@ -1,6 +1,6 @@
 import React from "react";
 import { useAppSelector } from "../../store/hooks";
-import FilePreview from "./elements/FilePreview";
+import FilePreview from "../dropzone/FilePreview";
 import FileUpload from "./elements/FileUpload";
 
 const FileContainer = () => {
