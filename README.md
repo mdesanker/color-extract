@@ -15,7 +15,7 @@ The [Color Extractor](https://mdesanker.github.io/color-extract) App
 
 ## Description
 
-This is a frontend app which uses React Palette to extract the prominent colors from images. Users upload images by drag-and-drop or browsing their file system, and then the colors are displayed in a palette. Hovering over a color displays the hex code, and clicking the color will copy the hexcode to the clipboard.
+This is a frontend app which uses React Palette to extract the prominent colors from images. Users upload images by drag-and-drop or browsing their file system, and then the colors are displayed in a palette (heavily inspired by [Coolors](https://coolors.co/palettes/trending)). Hovering over a color displays the hex code, and clicking the color will copy the hexcode to the clipboard.
 
 ## Motivation
 
@@ -25,9 +25,15 @@ The motivation for this project comes from the wanting to be able to extract col
 
 1. Drag-and-drop an image onto the drop area, or click drop area to browse files.
 
+<img src="./demo/image-1.png" alt="landing screen" height="200px" />
+
 2. Hover color swatches on palette to view hex codes. Click to copy hex code to clipboard.
 
+<img src="./demo/image-2.png" alt="color hover" height="200px" />
+
 3. Click image or drag new image to drop area to process new image. Click clear button to remove current image.
+
+<img src="./demo/image-3.png" alt="color copied" height="200px" />
 
 ## Built with
 
@@ -40,9 +46,7 @@ The motivation for this project comes from the wanting to be able to extract col
 
 ## Challenges
 
-The extracted color palette was heavily inspired by [Coolors](https://coolors.co/palettes/trending)
-
-Ensuring foreground and background color combinations provide sufficient contrast by [calculating the perceived brightness](https://www.nbdtech.com/Blog/archive/2008/04/27/Calculating-the-Perceived-Brightness-of-a-Color.aspx) of the background color.
+1. Ensuring foreground and background color combinations provide sufficient contrast by [calculating the perceived brightness](https://www.nbdtech.com/Blog/archive/2008/04/27/Calculating-the-Perceived-Brightness-of-a-Color.aspx) of the background color.
 
 First hex colors were converted into rgb colors with parseInt base 16:
 
@@ -62,7 +66,7 @@ const brightness = Math.round(red * 299 + green * 587 + blue * 114) / 1000);
 
 If the color's brightness > 125, then the text is set to black, and if brightness < 125, text is set to white.
 
-When colors in the palettes on Coolors are hovered, they expand smoothly. I have not been able to figure out how to achieve this with Tailwind CSS yet.
+2. When colors in the palettes on [Coolors](https://coolors.co/palettes/trending) are hovered, they expand smoothly. I have not been able to figure out how to achieve this with Tailwind CSS yet.
 
 ## Credits
 
