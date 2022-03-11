@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { useAppDispatch } from "../../store/hooks";
-import { timedAlert } from "../../store/slices/alertSlice";
-import { brightness } from "../../utils/Utils";
+import { useAppDispatch } from "../../../store/hooks";
+import { timedAlert } from "../../../store/slices/alertSlice";
+import { brightness } from "../../../utils/Utils";
 import { FaCheck } from "react-icons/fa";
 
 interface Props {

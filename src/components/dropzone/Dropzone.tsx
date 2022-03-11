@@ -3,7 +3,7 @@ import Dropzone from "react-dropzone";
 import { BsCardImage } from "react-icons/bs";
 import { useAppDispatch, useAppSelector } from "../../store/hooks";
 import { loadImage } from "../../store/slices/imageSlice";
-import FilePreview from "./FilePreview";
+import FilePreview from "./elements/FilePreview";
 
 const DropZone = () => {
   const dispatch = useAppDispatch();

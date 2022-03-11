@@ -1,5 +1,5 @@
-import { useAppSelector } from "../../store/hooks";
-import { RootState } from "../../store/store";
+import { useAppSelector } from "../../../store/hooks";
+import { RootState } from "../../../store/store";
 
 const FilePreview = () => {
   const { image, imageURL } = useAppSelector((state: RootState) => state.image);

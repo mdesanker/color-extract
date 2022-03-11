@@ -1,10 +1,10 @@
 import { usePalette } from "react-palette";
 import { useAppSelector } from "../../store/hooks";
 import { RootState } from "../../store/store";
-import ColorSwatch from "./ColorSwatch";
+import ColorSwatch from "./elements/ColorSwatch";
 import { v4 as uuidv4 } from "uuid";
 
-const ColorPanel = () => {
+const Palette = () => {
   const { imageURL } = useAppSelector((state: RootState) => state.image);
 
   const { data } = usePalette(imageURL);
@@ -30,4 +30,4 @@ const ColorPanel = () => {
   );
 };
 
-export default ColorPanel;
+export default Palette;
