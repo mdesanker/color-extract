@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/github.io/color-extract/static/css/main.352cfb1d.css",
-    "main.js": "/github.io/color-extract/static/js/main.7cfee1b5.js",
-    "static/js/787.1ec94ef8.chunk.js": "/github.io/color-extract/static/js/787.1ec94ef8.chunk.js",
-    "index.html": "/github.io/color-extract/index.html",
-    "main.352cfb1d.css.map": "/github.io/color-extract/static/css/main.352cfb1d.css.map",
-    "main.7cfee1b5.js.map": "/github.io/color-extract/static/js/main.7cfee1b5.js.map",
-    "787.1ec94ef8.chunk.js.map": "/github.io/color-extract/static/js/787.1ec94ef8.chunk.js.map"
+    "main.css": "/color-extract/static/css/main.352cfb1d.css",
+    "main.js": "/color-extract/static/js/main.26fc5d3f.js",
+    "static/js/787.1ec94ef8.chunk.js": "/color-extract/static/js/787.1ec94ef8.chunk.js",
+    "index.html": "/color-extract/index.html",
+    "main.352cfb1d.css.map": "/color-extract/static/css/main.352cfb1d.css.map",
+    "main.26fc5d3f.js.map": "/color-extract/static/js/main.26fc5d3f.js.map",
+    "787.1ec94ef8.chunk.js.map": "/color-extract/static/js/787.1ec94ef8.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.352cfb1d.css",
-    "static/js/main.7cfee1b5.js"
+    "static/js/main.26fc5d3f.js"
   ]
 }
