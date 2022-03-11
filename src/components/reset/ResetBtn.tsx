@@ -1,4 +1,4 @@
-import { FaEraser } from "react-icons/fa";
+import { BiEraser } from "react-icons/bi";
 import { useAppDispatch } from "../../store/hooks";
 import { clearImage } from "../../store/slices/imageSlice";
 
@@ -11,11 +11,11 @@ const ResetBtn = () => {
 
   return (
     <button
-      className="flex items-center gap-4 px-4 py-2 border-2 border-black text-xl duration-200 hover:bg-gray-200 m-6"
+      className="flex items-center justify-center gap-4 px-6 py-4 border-2 border-gray-300 rounded-full text-xl text-black duration-200 font-medium m-6 hover:border-black"
       onClick={clickHandler}
     >
-      <FaEraser />
-      <p>Reset</p>
+      <BiEraser className="h-8 w-8" />
+      <p>Clear</p>
     </button>
   );
 };
