@@ -1,6 +1,8 @@
+import { useState } from "react";
 import { useAppDispatch } from "../../store/hooks";
 import { timedAlert } from "../../store/slices/alertSlice";
 import { brightness } from "../../utils/Utils";
+import { FaCheck } from "react-icons/fa";
 
 interface Props {
   color: string;
@@ -11,9 +13,16 @@ const ColorSwatch = ({ color }: Props) => {
 
   const hexCode = color.slice(1);
 
+  const [checkVisible, setCheckVisible] = useState(false);
+
   const clickHandler = () => {
     navigator.clipboard.writeText(hexCode);
+    setCheckVisible(true);
     dispatch(timedAlert("Color copied to clipboard!"));
+  };
+
+  const mouseLeaveHandler = () => {
+    setCheckVisible(false);
   };
 
   return (
@@ -22,14 +31,19 @@ const ColorSwatch = ({ color }: Props) => {
         className="h-full w-1/6 cursor-pointer group"
         style={{ backgroundColor: color }}
         onClick={clickHandler}
+        onMouseLeave={mouseLeaveHandler}
       >
-        <p
-          className={`w-full h-full flex justify-center items-center text-center uppercase font-medium opacity-0 group-hover:opacity-100 ${
+        <div
+          className={`w-full h-full flex justify-center items-center  opacity-0 group-hover:opacity-100 ${
             brightness(hexCode) > 125 ? "text-black" : "text-white"
           }`}
         >
-          {hexCode}
-        </p>
+          {checkVisible ? (
+            <FaCheck className="text-2xl" />
+          ) : (
+            <p className="font-medium uppercase text-center">{hexCode}</p>
+          )}
+        </div>
       </div>
     </>
   );
