@@ -1,7 +1,7 @@
 {
   "name": "color-extract",
   "version": "0.1.0",
-  "homepage": "https://mdesanker/github.io/color-extract",
+  "homepage": "https://mdesanker.github.io/color-extract",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.0",
