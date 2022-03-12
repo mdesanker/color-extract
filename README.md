@@ -19,19 +19,19 @@ The [Color Extractor](https://mdesanker.github.io/color-extract) App
 
 ## Description
 
-This is a frontend app which uses React Palette to extract the prominent colors from images. Users upload images by drag-and-drop or browsing their file system, and then the colors are displayed in a palette (heavily inspired by [Coolors](https://coolors.co/palettes/trending)). Hovering over a color displays the hex code, and clicking the color will copy the hexcode to the clipboard.
+This is a frontend app which uses React Palette to extract the prominent colors from images. Users upload images by drag-and-dropping or browsing their file system. An image preview is displayed over the drop zone and the output colors are displayed in a palette (heavily inspired by [Coolors](https://coolors.co/palettes/trending)). Hovering over a color displays the hex code, and clicking the color will copy the hexcode to the clipboard.
 
 ## Motivation
 
-The motivation for this project comes from the wanting to be able to extract colors from images that are saved on the users harddrive or images on webpages. The user can then easily hover of the color outputs in the palette to display their hex code, and click to copy the hex code to the clipboard.
+The motivation for this project comes from the wanting to be able to extract colors from images that are saved on the user's harddrive or images on webpages. The user can then easily hover over the color outputs in the palette to display the hex code, and click to copy the hex code to the clipboard.
 
 ## How to use
 
-1. Drag-and-drop an image onto the drop area, or click drop area to browse files.
+1. Drag-and-drop an image onto the drop area, or click the drop area to browse for a file.
 
 <img src="./demo/image-1.png" alt="landing screen" height="200px" />
 
-2. Hover color swatches on palette to view hex codes. Click to copy hex code to clipboard.
+2. Hover color swatches on palette to expand and reveal hex code. Click to copy hex code to clipboard.
 
 <img src="./demo/image-2.png" alt="color hover" height="200px" />
 
