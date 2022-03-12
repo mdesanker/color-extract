@@ -70,7 +70,7 @@ const brightness = Math.round(red * 299 + green * 587 + blue * 114) / 1000);
 
 If the color's brightness > 125, then the text is set to black, and if brightness < 125, text is set to white.
 
-2. When colors in the palettes on [Coolors](https://coolors.co/palettes/trending) are hovered, they expand smoothly. I have not been able to figure out how to achieve this with Tailwind CSS yet.
+2. Having colors in the palettes expand smoothly on hover like they do on [Coolors](https://coolors.co/palettes/trending) took a while to figure out, but had a relatively simple solution. Initially I was using flex-grow on the swatches to ensure they each expanded to the same size within the palette. Then I was setting a percent width for hover. Going from flex-grow control to width control meant that setting transition-width had no effect. This was fixed by setting initial width to a percentage (1/6 since react palette always outputs 6 colors) and hover width to a percentage.
 
 ## Credits
 
