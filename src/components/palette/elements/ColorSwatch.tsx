@@ -28,7 +28,7 @@ const ColorSwatch = ({ color }: Props) => {
   return (
     <>
       <div
-        className="h-full w-1/6 cursor-pointer group  hover:w-1/3 transition-width duration-150"
+        className="h-full w-1/6 cursor-pointer group  hover:w-1/3 transition-width duration-150 ease-in-out"
         style={{ backgroundColor: color }}
         onClick={clickHandler}
         onMouseLeave={mouseLeaveHandler}
