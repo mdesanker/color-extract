@@ -7,7 +7,6 @@ export const loadImage = createAsyncThunk<any, File>(
       dispatch(setImage(file.name));
 
       const url = URL.createObjectURL(file);
-      console.log(url);
 
       return url;
     } catch (err: any) {
